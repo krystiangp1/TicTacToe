@@ -21,6 +21,7 @@ namespace projekt
        
         public MainWindow()
         {
+            
             InitializeComponent();
             ustawienie_poczatkowe(); // odwolanie do metody
             lbl_przypisanie(); // odwolanie do metody
@@ -142,7 +143,9 @@ namespace projekt
 
         private void statystyki_Click(object sender, RoutedEventArgs e) // menu statystyki
         {
-            statystyki fs = new statystyki();
+            //Statystyki fs = new Statystyki();
+            //fs.ShowDialog();
+            Window1 fs = new Window1();
             fs.ShowDialog();
         }
 

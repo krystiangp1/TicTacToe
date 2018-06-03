@@ -15,13 +15,13 @@ using System.Windows.Shapes;
 namespace projekt
 {
     /// <summary>
-    /// Interaction logic for statystyki.xaml
+    /// Logika interakcji dla klasy Statystyki.xaml
     /// </summary>
-    public partial class statystyki : Window
+    public partial class Statystyki : Window
     {
-        public statystyki()
+        public Statystyki()
         {
-            InitializeComponent();
+           // InitializeComponent();
         }
     }
 }
