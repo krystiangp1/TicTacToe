@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projekt"
         mc:Ignorable="d"
-        Title="Kółko Krzyżyk" MinWidth="200" MinHeight="100" Width="300" Height="350"  FontWeight="Bold" ResizeMode="CanMinimize">
+        Title="Kolko Krzyzyk" MinWidth="200" MinHeight="100" Width="300" Height="350"  FontWeight="Bold" ResizeMode="CanMinimize">
     <Grid x:Name="gridd" MinWidth="200" MinHeight="100">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FF471414" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="21*"/>
             <RowDefinition Height="115*"/>
@@ -26,9 +32,9 @@
         <Button x:Name="C1" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="44,174,0,0" Grid.Row="1" VerticalAlignment="Top" Width="51" Height="47" Click="button_click" MouseEnter="mysz_zaznaczenie" MouseLeave="mysz_odznaczenie" FontFamily="Segoe Print" FontSize="24"/>
         <Button x:Name="C2" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="117,174,0,0" Grid.Row="1" VerticalAlignment="Top" Width="51" Height="47" Click="button_click" MouseEnter="mysz_zaznaczenie" MouseLeave="mysz_odznaczenie" FontFamily="Segoe Print" FontSize="24"/>
         <Button x:Name="C3" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="187,174,0,0" Grid.Row="1" VerticalAlignment="Top" Width="51" Height="47" Click="button_click" MouseEnter="mysz_zaznaczenie" MouseLeave="mysz_odznaczenie" RenderTransformOrigin="-0.034,0.514" FontFamily="Segoe Print" FontSize="24"/>
-        <Label x:Name="l_wygranych_o" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="187,18,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="40" RenderTransformOrigin="3.148,0.438"/>
-        <Label x:Name="l_wygranych_x" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="48,18,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="40"/>
-        <Label x:Name="l_remisow" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="115,18,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="40" RenderTransformOrigin="1.153,0.707"/>
+        <Label x:Name="l_wygranych_o" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="187,18,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="40" RenderTransformOrigin="3.148,0.438" Foreground="White"/>
+        <Label x:Name="l_wygranych_x" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="48,18,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="40" Foreground="White"/>
+        <Label x:Name="l_remisow" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="115,18,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="40" RenderTransformOrigin="1.153,0.707" Foreground="White"/>
         <Menu x:Name="menu" Grid.ColumnSpan="3" Height="32" VerticalAlignment="Top" HorizontalContentAlignment="Stretch">
             <MenuItem Header="Ustawienia">
 
@@ -38,11 +44,11 @@
             </MenuItem>
             <MenuItem Header="O programie" Click="o_programie_Click"/>
         </Menu>
-        <Label x:Name="lbl_gracz1" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="48,0,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.603,0.7"/>
-        <Label x:Name="lbl_remis" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="115,0,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.603,0.7"/>
-        <Label x:Name="lbl_gracz2" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="187,0,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.603,0.7"/>
-        <Label x:Name="lbl_ruch" Grid.ColumnSpan="2" Content="Label" HorizontalAlignment="Left" Margin="44,10,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_ruch2" Grid.ColumnSpan="2" Content="Label" HorizontalAlignment="Left" Margin="187,10,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_gracz1" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="48,0,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.603,0.7" Foreground="White"/>
+        <Label x:Name="lbl_remis" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="115,0,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.603,0.7" Foreground="White"/>
+        <Label x:Name="lbl_gracz2" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="187,0,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.603,0.7" Foreground="White"/>
+        <Label x:Name="lbl_ruch" Grid.ColumnSpan="2" Content="Label" HorizontalAlignment="Left" Margin="44,10,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="lbl_ruch2" Grid.ColumnSpan="2" Content="Label" HorizontalAlignment="Left" Margin="187,10,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="White"/>
 
     </Grid>
 

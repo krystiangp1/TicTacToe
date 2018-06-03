@@ -10,15 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 
 namespace projekt
 {
+    /// <summary>
+    /// Logika interakcji dla klasy Window4.xaml
+    /// </summary>
     public partial class MainWindow : Window
     {
-       
         public MainWindow()
         {
             
@@ -27,34 +27,34 @@ namespace projekt
             lbl_przypisanie(); // odwolanie do metody
         }
 
-        
-        int ilosc = 0; 
-        static string gracz1="Gracz 1", gracz2="Gracz 2"; 
-        bool k_gracz = true; 
+
+        int ilosc = 0;
+        static string gracz1 = "Gracz 1", gracz2 = "Gracz 2";
+        bool k_gracz = true;
 
         static bool losuj(bool k_gracz) // losowanie gracza kto zaczyna
         {
             Random rand = new Random();
             for (int i = 1; i <= 2; i++)
             {
-                k_gracz= rand.Next(2) == 0 ? false : true;
+                k_gracz = rand.Next(2) == 0 ? false : true;
             }
             return k_gracz;
         }
 
         private void button_click(object sender, RoutedEventArgs e) // obsluga klikniecia buttona
         {
-         
+
             Button b = (Button)sender;
             if (k_gracz)
             {
                 b.Content = "X";
             }
             else
-            { 
+            {
                 b.Content = "O";
             }
-           
+
             ktoma_ruch();
             k_gracz = !k_gracz;
             b.IsEnabled = false;
@@ -73,10 +73,10 @@ namespace projekt
                 }
                 else
                     b.Content = "O"; // pokazanie O na buttonie
-            } 
+            }
         }
 
-        private void mysz_odznaczenie(object sender, MouseEventArgs e) 
+        private void mysz_odznaczenie(object sender, MouseEventArgs e)
         {
             Button b = (Button)sender;
             if (b.IsEnabled) // sprawdzenie czy mysz znajduje sie na buttonie
@@ -84,19 +84,19 @@ namespace projekt
                 b.Content = ""; // nadanie pustej nazwy buttona
             }
         }
-    
+
         private void ustawienie_poczatkowe() // ustawienie zerowych statystyk i etykiet kto gra
         {
-            
+
             l_wygranych_x.Content = "0";
             l_wygranych_o.Content = "0";
             l_remisow.Content = "0";
-           if(k_gracz)
+            if (k_gracz)
             {
                 lbl_ruch.Content = "Teraz ruch ma:";
                 lbl_ruch2.Content = gracz1;
             }
-           else
+            else
             {
                 lbl_ruch.Content = "Teraz ruch ma:";
                 lbl_ruch2.Content = gracz2;
@@ -111,7 +111,7 @@ namespace projekt
             {
                 if (przyciski.GetType() == typeof(Button)) //typ button
                 {
-                    Button btn = (Button)przyciski; 
+                    Button btn = (Button)przyciski;
                     btn.IsEnabled = true;
                     btn.Content = "";
                 }
@@ -144,9 +144,7 @@ namespace projekt
         private void statystyki_Click(object sender, RoutedEventArgs e) // menu statystyki
         {
             //Statystyki fs = new Statystyki();
-            //fs.ShowDialog();
-            Window1 fs = new Window1();
-            fs.ShowDialog();
+           // fs.ShowDialog();
         }
 
         private void ktoma_ruch() //metoda sprawdzenia kto ma teraz ruch
@@ -162,7 +160,7 @@ namespace projekt
                 lbl_ruch2.Content = gracz1;
             }
         }
-      
+
         private void ktowygral() //sprawdzenie kto wygral oraz dodanie statystyk
         {
             bool zwyciezca = false;
@@ -197,7 +195,7 @@ namespace projekt
                 if (k_gracz)
                 {
                     wys_zwyciezcy = gracz2;
-                    l_wygranych_o.Content = Convert.ToInt32(l_wygranych_o.Content)+1;
+                    l_wygranych_o.Content = Convert.ToInt32(l_wygranych_o.Content) + 1;
                 }
                 else
                 {
@@ -213,11 +211,10 @@ namespace projekt
                 {
                     l_remisow.Content = Convert.ToInt32(l_remisow.Content) + 1;
                     MessageBox.Show("Remis", "Wynik");
-                    nowagra(); 
+                    nowagra();
                 }
             }
         }
 
     }
 }
-
