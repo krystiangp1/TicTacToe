@@ -143,8 +143,8 @@ namespace projekt
 
         private void statystyki_Click(object sender, RoutedEventArgs e) // menu statystyki
         {
-            //Statystyki fs = new Statystyki();
-           // fs.ShowDialog();
+            Statystyki fs = new Statystyki();
+            fs.ShowDialog();
         }
 
         private void ktoma_ruch() //metoda sprawdzenia kto ma teraz ruch
