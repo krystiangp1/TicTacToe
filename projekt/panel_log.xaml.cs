@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace projekt
 {
     /// <summary>
-    /// Logika interakcji dla klasy Window2.xaml
+    /// Logika interakcji dla klasy Window3.xaml
     /// </summary>
-    public partial class Window2 : Window
+    public partial class panel_log : Window
     {
-        public Window2()
+        public panel_log()
         {
             InitializeComponent();
         }
@@ -28,15 +28,12 @@ namespace projekt
         {
 
         }
-       
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            Window1 wnd1 = new Window1();
-            wnd1.Show();
+            pole_gry graj = new pole_gry();
+           graj.Show();
             this.Close();
-
-
         }
     }
 }

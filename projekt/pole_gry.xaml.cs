@@ -17,9 +17,9 @@ namespace projekt
     /// <summary>
     /// Logika interakcji dla klasy Window4.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class pole_gry : Window
     {
-        public MainWindow()
+        public pole_gry()
         {
             
             InitializeComponent();

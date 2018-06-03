@@ -62,35 +62,35 @@
     <Compile Include="Statystyki.xaml.cs">
       <DependentUpon>Statystyki.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
+    <Compile Include="panel1.xaml.cs">
+      <DependentUpon>panel1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Window2.xaml.cs">
-      <DependentUpon>Window2.xaml</DependentUpon>
+    <Compile Include="panel_rej.xaml.cs">
+      <DependentUpon>panel_rej.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Window3.xaml.cs">
-      <DependentUpon>Window3.xaml</DependentUpon>
+    <Compile Include="panel_log.xaml.cs">
+      <DependentUpon>panel_log.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Window4.xaml.cs">
-      <DependentUpon>Window4.xaml</DependentUpon>
+    <Compile Include="pole_gry.xaml.cs">
+      <DependentUpon>pole_gry.xaml</DependentUpon>
     </Compile>
     <Page Include="Statystyki.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Window1.xaml">
+    <Page Include="panel1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Window2.xaml">
+    <Page Include="panel_rej.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Window3.xaml">
+    <Page Include="panel_log.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Window4.xaml">
+    <Page Include="pole_gry.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
