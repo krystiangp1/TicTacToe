@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.OleDb;
+
 
 namespace projekt
 {
@@ -19,17 +21,20 @@ namespace projekt
     /// </summary>
     public partial class pole_gry : Window
     {
+        private OleDbConnection connection = new OleDbConnection();
         public pole_gry()
         {
-            
+
             InitializeComponent();
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Projekt\Baza_kolko_krzyzyk.accdb;
+Persist Security Info=False;"; // odwolanie do lokalnej bazy danych
             ustawienie_poczatkowe(); // odwolanie do metody
             lbl_przypisanie(); // odwolanie do metody
         }
 
 
         int ilosc = 0;
-        static string gracz1 = "Gracz 1", gracz2 = "Gracz 2";
+        static string gracz1 = "Anka", gracz2 = "An";
         bool k_gracz = true;
 
         static bool losuj(bool k_gracz) // losowanie gracza kto zaczyna
@@ -102,7 +107,6 @@ namespace projekt
                 lbl_ruch2.Content = gracz2;
             }
         }
-
         private void nowagra() // metoda obslugujaca nowa gre
         {
             k_gracz = losuj(k_gracz); // przypisanie wartosci losowej
@@ -127,6 +131,7 @@ namespace projekt
 
         private void nowagra_Click(object sender, RoutedEventArgs e) //przycisk menu
         {
+
             nowagra();
             ustawienie_poczatkowe();
         }
@@ -163,6 +168,13 @@ namespace projekt
 
         private void ktowygral() //sprawdzenie kto wygral oraz dodanie statystyk
         {
+            connection.Open();
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "select * from Punkty";  // odwołanie do tabeli Uzytkownicy, kolumny Login i połączenie go z TextBoxem txt_login oraz do kolumny Haslo i połączenie z tekstboxem txt_password
+         
+
+
             bool zwyciezca = false;
 
             // sprawdzenie poziome
@@ -189,22 +201,41 @@ namespace projekt
                 zwyciezca = true;
 
 
+
             if (zwyciezca)
             {
                 string wys_zwyciezcy = "";
                 if (k_gracz)
                 {
+                    OleDbDataReader reader = command.ExecuteReader();
+                    reader.Close();
                     wys_zwyciezcy = gracz2;
                     l_wygranych_o.Content = Convert.ToInt32(l_wygranych_o.Content) + 1;
+                    command.CommandText = "insert into Punkty (Login , Punkty) values (@kolumna1 , @kolumna2)"; // zapis do bazy punktu za wygranie rundy
+                    command.Parameters.AddWithValue("@kolumna1", wys_zwyciezcy);// rozpisanie kolumn
+                    command.Parameters.AddWithValue("@kolumna2", '1');    
+                    command.ExecuteNonQuery(); //zwraca informację o wykonanym zadaniu do bazy danych
+                    connection.Close();
+                    MessageBox.Show(wys_zwyciezcy + " Wygral!", "Wynik");
+                    nowagra();
                 }
                 else
                 {
                     wys_zwyciezcy = gracz1;
                     l_wygranych_x.Content = Convert.ToInt32(l_wygranych_x.Content) + 1;
+
+                    command.CommandText = "insert into Punkty (Login , Punkty) values (@kolumna1 , @kolumna2)"; // zapis do bazy punktu za wygranie rundy
+                    command.Parameters.AddWithValue("@kolumna1", wys_zwyciezcy);// rozpisanie kolumn
+                    command.Parameters.AddWithValue("@kolumna2", '1');
+                    command.ExecuteNonQuery(); //zwraca informację o wykonanym zadaniu do bazy danych
+                    connection.Close();
+                    MessageBox.Show(wys_zwyciezcy + " Wygral!", "Wynik");
+                    nowagra();
+             
+                    
                 }
-                MessageBox.Show(wys_zwyciezcy + " Wygral!", "Wynik");
-                nowagra();
             }
+
             else
             {
                 if (ilosc == 9)
@@ -212,9 +243,12 @@ namespace projekt
                     l_remisow.Content = Convert.ToInt32(l_remisow.Content) + 1;
                     MessageBox.Show("Remis", "Wynik");
                     nowagra();
+
                 }
             }
+     
+            connection.Close();
         }
 
-    }
-}
+        }
+    } 

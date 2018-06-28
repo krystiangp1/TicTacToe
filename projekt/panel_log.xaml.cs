@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.OleDb;
 
 namespace projekt
 {
@@ -19,20 +20,60 @@ namespace projekt
     /// </summary>
     public partial class panel_log : Window
     {
+        private OleDbConnection connection = new OleDbConnection();
         public panel_log()
         {
             InitializeComponent();
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Projekt\Baza_kolko_krzyzyk.accdb;
+Persist Security Info=False;";  //to jest połączenie z bazą danych z lokalizacją na lokalnym dysku komputera
         }
-
+        
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void b_zaloguj_Click(object sender, RoutedEventArgs e)
         {
-            pole_gry graj = new pole_gry();
-           graj.Show();
+            connection.Open();
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "select * from Uzytkownicy where Login='" + txtb_login.Text + "' and Haslo='" + txtb_haslo.Password + "'";  // odwołanie do tabeli Uzytkownicy, kolumny Login i połączenie go z TextBoxem txt_login oraz do kolumny Haslo i połączenie z tekstboxem txt_password
+            OleDbDataReader reader = command.ExecuteReader(); // tworzymy zmienną lokalną reader 
+            int count = 0; // tworzę zmienną count równą 0(czli odzwierciedlenie wpisanego loginu i hasła);
+            while (reader.Read()) // przy pomocy pętli while zwiększam wartość zmiennej count o 1(będzie to odzwierciedleniem indeksów w bazie, dzięki temu weryfikuje po kolei loginy i hasła wpisane do bazy);
+            {
+                count = count + 1;
+                //count++;
+                //
+               
+            }
+            if (count == 1) // instrukcja if(jesli hasło jest poprawne i się pokrywa 1:1 to logowanie następuje i pojawia się komunikat. 
+            {
+                MessageBox.Show("Poprawny login i hasło");
+                connection.Close(); // connection.Close zamyka połączenie z bazą danych po spełnieniu warunku
+                connection.Dispose(); // baza dysponuje już takimi danymi, dlatego następuje logowanie
+                this.Hide(); // zamyka okno
+                konto_u wnd = new konto_u();
+                wnd.Show();
+                this.Close();
+                reader.Close();
+            }
+
+
+            else // else czyli pozostałe przypadki, jeśli użytkownik wpisze niepoprawne wartości do textboxa loginu lub hasła wyrzuci komunikat o niepoprawnych danych
+            {
+                MessageBox.Show("Login lub hasło jest niepoprawne");
+            }
+          
+            connection.Close();
+            reader.Close();
+        }
+
+        private void powrot_Click(object sender, RoutedEventArgs e)
+        {
+            panel1  wnd = new panel1();
+            wnd.Show();
             this.Close();
         }
     }

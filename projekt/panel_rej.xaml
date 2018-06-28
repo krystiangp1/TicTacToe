@@ -5,26 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projekt"
         mc:Ignorable="d"
-        Title="Rejestracja" Height="300" Width="300">
-    <Grid>
+        Title="Rejestracja" Height="366.165" Width="515.534">
+    <Grid Margin="0,0,-1.2,-29.4" HorizontalAlignment="Left" Width="510">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="0"/>
                 <GradientStop Color="#FF471414" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox HorizontalAlignment="Left" Height="35" Margin="66,77,0,0" TextWrapping="Wrap" Text="Wpisz Login" VerticalAlignment="Top" Width="175" TextChanged="TextBox_TextChanged"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="65,178,0,0" VerticalAlignment="Top" Width="175" Height="35
-                     "/>
-        <Label x:Name="LOGIN" Content="LOGIN" HorizontalAlignment="Left" Margin="66,24,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="#FFD6D6D6">
+        <GroupBox x:Name="g_b_rejestrracja" Header="Rejestracja" HorizontalAlignment="Left" Height="286" VerticalAlignment="Top" Width="237" Margin="253,40,0,0" FontSize="20" Foreground="Gainsboro" AutomationProperties.IsOffscreenBehavior="Offscreen"/>
+        <TextBox x:Name="txt_login" HorizontalAlignment="Left" Height="35" Margin="285,106,0,0" TextWrapping="Wrap" Text="Wpisz Login" VerticalAlignment="Top" Width="175" TextChanged="TextBox_TextChanged"/>
+        <PasswordBox x:Name="txt_password" HorizontalAlignment="Left" Margin="285,178,0,0" VerticalAlignment="Top" Width="177" Height="37"/>
+        <Label x:Name="LOGIN" Content="LOGIN" HorizontalAlignment="Left" Margin="285,62,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="#FFD6D6D6" Height="39" Width="88">
             <Label.Background>
                 <ImageBrush/>
             </Label.Background>
         </Label>
-        <Label x:Name="HASLO" Content="HASLO" Margin="68,127,48,0" VerticalAlignment="Top" Foreground="#FFD6D6D6" FontWeight="Bold" FontSize="24"/>
-        <Button Content="Powrot" HorizontalAlignment="Left" Margin="196,237,0,0" VerticalAlignment="Top" Click="Button_Click" BorderBrush="White" Background="#FF807F7F" Foreground="#FF020101" Cursor="None" FontWeight="Bold"/>
-        <Label x:Name="Baza" HorizontalAlignment="Left" VerticalAlignment="Top" Height="66" Width="130" AutomationProperties.Name="Baza" Margin="154,0,0,0" FontSize="18" Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="113,237,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.024,0.531" Click="button_Click_1"/>
+        <Label x:Name="HASLO" Content="HASLO" Margin="285,141,50,0" VerticalAlignment="Top" Foreground="#FFD6D6D6" FontWeight="Bold" FontSize="24"/>
+      
+        <Button x:Name="b_zarejestruj" Content="Zarejestruj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="285,278,0,0" Click="b_zarejestruj_Click" Height="35" RenderTransformOrigin="2.109,0.213"/>
+        <Button x:Name="sprbaze" Content="Buttonspr" HorizontalAlignment="Left" Margin="44,215,0,0" VerticalAlignment="Top" Width="75" Click="sprbaze_Click"/>
+        <Label x:Name="labelspr" Content="Label" HorizontalAlignment="Left" Margin="71,84,0,0" VerticalAlignment="Top" Background="#FFF50000"/>
+        <Button x:Name="powrot" Content="Powrot" HorizontalAlignment="Left" Margin="82,299,0,0" VerticalAlignment="Top" Width="75" Click="powrot_Click"/>
 
 
 

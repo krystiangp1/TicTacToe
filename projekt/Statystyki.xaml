@@ -13,6 +13,7 @@
                 <GradientStop Color="#FF471414" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="button" Content="Pokaz statystyki" HorizontalAlignment="Left" Margin="134,227,0,0" VerticalAlignment="Top" Width="123"/>
+        <Button x:Name="s_stat" Content="Pokaż statystyki" HorizontalAlignment="Left" Margin="134,227,0,0" VerticalAlignment="Top" Width="123" Click="button_Click"/>
+        <DataGrid x:Name="g_stat" HorizontalAlignment="Left" Height="181" Margin="22,28,0,0" VerticalAlignment="Top" Width="248" SelectionChanged="DataGrid_SelectionChanged"/>
     </Grid>
 </Window>
