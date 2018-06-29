@@ -49,6 +49,7 @@
         <Label x:Name="lbl_gracz2" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="187,0,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.603,0.7" Foreground="White"/>
         <Label x:Name="lbl_ruch" Grid.ColumnSpan="2" Content="Label" HorizontalAlignment="Left" Margin="44,10,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="White"/>
         <Label x:Name="lbl_ruch2" Grid.ColumnSpan="2" Content="Label" HorizontalAlignment="Left" Margin="187,10,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="labeld" Grid.ColumnSpan="2" Content="Label" HorizontalAlignment="Left" Margin="117,0,0,0" Grid.Row="1" VerticalAlignment="Top"/>
 
     </Grid>
 

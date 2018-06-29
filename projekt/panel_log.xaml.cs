@@ -20,6 +20,9 @@ namespace projekt
     /// </summary>
     public partial class panel_log : Window
     {
+        public string gracz { get ; private set;  }
+
+
         private OleDbConnection connection = new OleDbConnection();
         public panel_log()
         {
@@ -32,7 +35,9 @@ Persist Security Info=False;";  //to jest połączenie z bazą danych z lokaliza
         {
 
         }
-
+        /// <summary>
+        /// Funkcja sprawdzajaca wpisanych danych z danymi znajdujacymi sie w bazie.
+        /// </summary>
         private void b_zaloguj_Click(object sender, RoutedEventArgs e)
         {
             connection.Open();
@@ -51,12 +56,15 @@ Persist Security Info=False;";  //to jest połączenie z bazą danych z lokaliza
             if (count == 1) // instrukcja if(jesli hasło jest poprawne i się pokrywa 1:1 to logowanie następuje i pojawia się komunikat. 
             {
                 MessageBox.Show("Poprawny login i hasło");
+           
                 connection.Close(); // connection.Close zamyka połączenie z bazą danych po spełnieniu warunku
                 connection.Dispose(); // baza dysponuje już takimi danymi, dlatego następuje logowanie
                 this.Hide(); // zamyka okno
-                konto_u wnd = new konto_u();
+                konto_u wnd = new konto_u(txtb_login.Text); //zaczytywanie i przypisywanie loginu do okna Konto uzytkownika
+             
                 wnd.Show();
-                this.Close();
+            
+           
                 reader.Close();
             }
 

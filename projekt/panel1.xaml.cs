@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace projekt
 {
     /// <summary>
-    /// Logika interakcji dla klasy Window1.xaml
+    /// Panel logowania i rejestracji
     /// </summary>
     public partial class panel1 : Window
     {

@@ -14,8 +14,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Button Content="Graj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="161" Margin="309,317,0,0" Height="57" FontSize="21" Click="Button_Click"/>
-        <Label x:Name="label" Content="Jesteś zalogowany jako:" HorizontalAlignment="Left" Margin="28,27,0,0" VerticalAlignment="Top" Height="58" Width="299" Background="{x:Null}" Foreground="#FFF01A1A" FontSize="26.667"/>
-        <Label x:Name="nazwa_gracza_baza" Content="gracz12" HorizontalAlignment="Left" Margin="372,43,0,0" VerticalAlignment="Top" Height="38" Width="98" Foreground="#FFE61616"/>
+        <Label x:Name="nazwa_gracza_baza" Content="" HorizontalAlignment="Left" Margin="30,40,0,0" VerticalAlignment="Top" Height="84" Width="485" Foreground="#FFE61616" FontSize="21.333"/>
 
     </Grid>
 </Window>

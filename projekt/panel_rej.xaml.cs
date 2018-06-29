@@ -32,7 +32,9 @@ Persist Security Info=False;";  //to jest połączenie z bazą danych z lokaliza
         {
 
         }
-  
+        /// <summary>
+        /// Rejestracja konta, funkcja sprawdzajaca czy są juz takie konta, jeżeli nie , konto zostaje utworzone.
+        /// </summary>
         private void b_zarejestruj_Click(object sender, RoutedEventArgs e)
         {
             connection.Open();

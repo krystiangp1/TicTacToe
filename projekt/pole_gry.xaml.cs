@@ -17,24 +17,28 @@ using System.Data.OleDb;
 namespace projekt
 {
     /// <summary>
-    /// Logika interakcji dla klasy Window4.xaml
+    /// Logika interakcji dla klasy pole gry
     /// </summary>
     public partial class pole_gry : Window
     {
         private OleDbConnection connection = new OleDbConnection();
         public pole_gry()
         {
-
+           
             InitializeComponent();
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Projekt\Baza_kolko_krzyzyk.accdb;
 Persist Security Info=False;"; // odwolanie do lokalnej bazy danych
             ustawienie_poczatkowe(); // odwolanie do metody
             lbl_przypisanie(); // odwolanie do metody
+         
         }
 
-
+        /// <summary>
+        /// przypisanie uzytkownikow
+        /// </summary>
         int ilosc = 0;
-        static string gracz1 = "Anka", gracz2 = "An";
+        string gracz1="aga";
+        static string gracz2="dada";
         bool k_gracz = true;
 
         static bool losuj(bool k_gracz) // losowanie gracza kto zaczyna
@@ -46,7 +50,9 @@ Persist Security Info=False;"; // odwolanie do lokalnej bazy danych
             }
             return k_gracz;
         }
-
+        /// <summary>
+        /// przypisywanie przyciskow x,o w zaleznosci od klikniecia
+        /// </summary>
         private void button_click(object sender, RoutedEventArgs e) // obsluga klikniecia buttona
         {
 
@@ -89,7 +95,9 @@ Persist Security Info=False;"; // odwolanie do lokalnej bazy danych
                 b.Content = ""; // nadanie pustej nazwy buttona
             }
         }
-
+        /// <summary>
+        /// ustawienie poczatkowe gry, zeruje wartosc wygranych remisow, oraz ruch graczy
+        /// </summary>
         private void ustawienie_poczatkowe() // ustawienie zerowych statystyk i etykiet kto gra
         {
 
@@ -201,7 +209,9 @@ Persist Security Info=False;"; // odwolanie do lokalnej bazy danych
                 zwyciezca = true;
 
 
-
+            /// <summary>
+            /// zapis do bazy wygranej,oraz wyswietlenie zwyciezcy
+            /// </summary>
             if (zwyciezca)
             {
                 string wys_zwyciezcy = "";

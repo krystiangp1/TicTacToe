@@ -16,7 +16,7 @@ using System.Data.OleDb;
 namespace projekt
 {
     /// <summary>
-    /// Interaction logic for Statystyki.xaml
+    /// Statystyki
     /// </summary>
     public partial class Statystyki : Window
     {
@@ -32,7 +32,9 @@ Persist Security Info=False;"; // odwolanie do lokalnej bazy danych
         {
 
         }
-
+        /// <summary>
+        /// Pobranie danych z bazy do statystyki.
+        /// </summary>
         private void button_Click(object sender, RoutedEventArgs e)
         {
             try
