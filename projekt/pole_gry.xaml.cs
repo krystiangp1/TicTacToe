@@ -37,7 +37,7 @@ Persist Security Info=False;"; // odwolanie do lokalnej bazy danych
         /// przypisanie uzytkownikow
         /// </summary>
         int ilosc = 0;
-        string gracz1="aga";
+        string gracz1="an";
         static string gracz2="dada";
         bool k_gracz = true;
 

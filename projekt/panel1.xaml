@@ -13,7 +13,7 @@
                 <GradientStop Color="#FF471414" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="Przycisk1" Content="Rejstracja" HorizontalAlignment="Left" Margin="57,86,0,0" VerticalAlignment="Top" Width="175" Height="40" Click="Przycisk1_Click"/>
+        <Button x:Name="Przycisk1" Content="Rejestracja" HorizontalAlignment="Left" Margin="57,86,0,0" VerticalAlignment="Top" Width="175" Height="40" Click="Przycisk1_Click"/>
         <Button x:Name="Przycisk2" Content="Logowanie" HorizontalAlignment="Left" Margin="58,177,0,0" VerticalAlignment="Top" Width="175" Height="40" Click="Przycisk2_Click"/>
 
     </Grid>

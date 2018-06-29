@@ -22,10 +22,10 @@
             </Label.Background>
         </Label>
         <Label x:Name="HASLO" Content="HASLO" Margin="285,141,50,0" VerticalAlignment="Top" Foreground="#FFD6D6D6" FontWeight="Bold" FontSize="24"/>
-      
+
         <Button x:Name="b_zarejestruj" Content="Zarejestruj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="285,278,0,0" Click="b_zarejestruj_Click" Height="35" RenderTransformOrigin="2.109,0.213"/>
-        <Button x:Name="sprbaze" Content="Buttonspr" HorizontalAlignment="Left" Margin="44,215,0,0" VerticalAlignment="Top" Width="75" Click="sprbaze_Click"/>
-        <Label x:Name="labelspr" Content="Label" HorizontalAlignment="Left" Margin="71,84,0,0" VerticalAlignment="Top" Background="#FFF50000"/>
+        <Button x:Name="sprbaze" Content="Sprawdz polaczenie" HorizontalAlignment="Left" Margin="42,62,0,0" VerticalAlignment="Top" Width="127" Click="sprbaze_Click" Height="22"/>
+        <Label x:Name="labelspr" Content="Kliknij przycisk aby sprawdzic" HorizontalAlignment="Left" Margin="22,22,0,0" VerticalAlignment="Top" Background="#FFF50000" RenderTransformOrigin="0.478,0.561"/>
         <Button x:Name="powrot" Content="Powrot" HorizontalAlignment="Left" Margin="82,299,0,0" VerticalAlignment="Top" Width="75" Click="powrot_Click"/>
 
 
