@@ -38,7 +38,7 @@ Persist Security Info=False;"; // odwolanie do lokalnej bazy danych
         /// </summary>
         int ilosc = 0;
         string gracz1="an";
-        static string gracz2="dada";
+        static string gracz2= "testy";
         bool k_gracz = true;
 
         static bool losuj(bool k_gracz) // losowanie gracza kto zaczyna
