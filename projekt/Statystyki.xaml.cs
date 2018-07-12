@@ -20,12 +20,14 @@ namespace projekt
     /// </summary>
     public partial class Statystyki : Window
     {
-        private OleDbConnection connection = new OleDbConnection();
+        private OleDbConnection connection = new OleDbConnection();/// <summary>
+        /// połączenie z bazą
+        /// </summary>
         public Statystyki()
         {
-            InitializeComponent();
+            InitializeComponent();///inicjalizacja bazy
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Projekt\Baza_kolko_krzyzyk.accdb;
-Persist Security Info=False;"; // odwolanie do lokalnej bazy danych
+Persist Security Info=False;"; /// odwolanie do lokalnej bazy danych
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -35,15 +37,15 @@ Persist Security Info=False;"; // odwolanie do lokalnej bazy danych
         /// <summary>
         /// Pobranie danych z bazy do statystyki.
         /// </summary>
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void button_Click(object sender, RoutedEventArgs e)///metoda kliknięcia na przycisk
         {
             try
             {
-                connection.Open(); // otwarcie połączenia z bazą danych po kliknięciu w przycisk
+                connection.Open(); /// otwarcie połączenia z bazą danych po kliknięciu w przycisk
                 OleDbCommand command = new OleDbCommand(); //tworzymy zmienną lokalną command
                 command.Connection = connection;
-                string query = "SELECT Login,Wynik FROM Wyniki"; // odwolanie do sql, które dane ma wyświetlać
-                command.CommandText = query; // odwołanie do źródła danych
+                string query = "SELECT Login,Wynik FROM Wyniki"; /// odwolanie do sql, które dane ma wyświetlać
+                command.CommandText = query; /// odwołanie do źródła danych
 
             
                 DataSet1 staty = new DataSet1();
@@ -51,7 +53,7 @@ Persist Security Info=False;"; // odwolanie do lokalnej bazy danych
                 nowyad.Fill(staty, "Wyniki");
                 g_stat.ItemsSource = staty.Tables["Wyniki"].DefaultView;
 
-                connection.Close(); //zamknięcie połączenia z bazą danych
+                connection.Close(); ///zamknięcie połączenia z bazą danych
          
 
 
@@ -59,9 +61,9 @@ Persist Security Info=False;"; // odwolanie do lokalnej bazy danych
 
 
 
-            catch (Exception ex) //wyświetla błędy
+            catch (Exception ex) ///wyświetla błędy
             {
-                MessageBox.Show("Błąd połączenia z bazą" + ex); // komunikat wyswietlacjacy sie w razie bledu
+                MessageBox.Show("Błąd połączenia z bazą" + ex); /// komunikat wyswietlacjacy sie w razie bledu
             }
             
         }
