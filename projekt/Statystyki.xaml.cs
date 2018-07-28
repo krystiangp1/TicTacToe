@@ -16,36 +16,47 @@ using System.Data.OleDb;
 namespace projekt
 {
     /// <summary>
-    /// Statystyki
+    /// statystyki
     /// </summary>
     public partial class Statystyki : Window
-    {
-        private OleDbConnection connection = new OleDbConnection();/// <summary>
-        /// połączenie z bazą
+    {/// <summary>
+     /// połączenie z bazą danych
+     /// </summary>
+        private OleDbConnection connection = new OleDbConnection();
+
+        /// <summary>
+        /// tutaj następuje inicjalizacja bazy danych oraz połączenie poprzez lokalne wskazanie ścieżki pliku
         /// </summary>
+
         public Statystyki()
         {
-            InitializeComponent();///inicjalizacja bazy
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Projekt\Baza_kolko_krzyzyk.accdb;
-Persist Security Info=False;"; /// odwolanie do lokalnej bazy danych
+            InitializeComponent();
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\agaza\OneDrive\Desktop\Projekt\Baza_kolko_krzyzyk.accdb;
+Persist Security Info=False;"; 
         }
-
+        /// <summary>
+        /// zdarzenie wyświetlające dane w komókach
+        /// </summary>
+        
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
         /// <summary>
-        /// Pobranie danych z bazy do statystyki.
+        ///metoda kliknięcia
+        ///po kliknięciu w przycisk otwierane jest połączączenie z bazą danych(dokładnie poprzez odwołanie poprzez sql do tabeli przechowującej dane)
+        ///w tabeli wyświetlane są wyniki wszystkich graczy
+        ///w razie blędnego połączenia z bazą danych wyświetlany jest komunikat o problemach
         /// </summary>
-        private void button_Click(object sender, RoutedEventArgs e)///metoda kliknięcia na przycisk
+        public void button_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                connection.Open(); /// otwarcie połączenia z bazą danych po kliknięciu w przycisk
-                OleDbCommand command = new OleDbCommand(); //tworzymy zmienną lokalną command
+                connection.Open(); 
+                OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "SELECT Login,Wynik FROM Wyniki"; /// odwolanie do sql, które dane ma wyświetlać
-                command.CommandText = query; /// odwołanie do źródła danych
+                string query = "SELECT Login,Wynik FROM Wyniki"; 
+                command.CommandText = query; 
 
             
                 DataSet1 staty = new DataSet1();
@@ -53,17 +64,13 @@ Persist Security Info=False;"; /// odwolanie do lokalnej bazy danych
                 nowyad.Fill(staty, "Wyniki");
                 g_stat.ItemsSource = staty.Tables["Wyniki"].DefaultView;
 
-                connection.Close(); ///zamknięcie połączenia z bazą danych
+                connection.Close(); 
          
-
-
-            }
-
-
-
-            catch (Exception ex) ///wyświetla błędy
+                }
+            
+            catch (Exception ex) 
             {
-                MessageBox.Show("Błąd połączenia z bazą" + ex); /// komunikat wyswietlacjacy sie w razie bledu
+                MessageBox.Show("Błąd połączenia z bazą" + ex); 
             }
             
         }

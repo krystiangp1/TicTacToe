@@ -17,94 +17,98 @@ using System.Data.OleDb;
 namespace projekt
 {
     /// <summary>
-    /// Logika interakcji dla klasy pole gry
+    /// pole gry
     /// </summary>
-    public partial class pole_gry : Window /// clasa pole_gry
+    public partial class pole_gry : Window
     {
-        private OleDbConnection connection = new OleDbConnection(); ///połączenie prywatne do bazy danych z klasy pole_gry <summary>
-        /// 
-        /// </summary>
-        public pole_gry()///odwółanine do klasy
-        {
-           
-            InitializeComponent();///
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Projekt\Baza_kolko_krzyzyk.accdb;
-Persist Security Info=False;"; /// odwolanie do lokalnej bazy danych_z adresem
-            ustawienie_poczatkowe(); /// odwolanie do metody
-            lbl_przypisanie(); /// odwolanie do metody
-         
-        }
-
+        private OleDbConnection connection = new OleDbConnection();
         /// <summary>
-        /// przypisanie uzytkownikow
+        /// inicjalizuje połączenie z bazą danych
         /// </summary>
-        int ilosc = 0;/// <summary>
-        /// 
-        /// </summary>
-        string gracz1="an";/// <summary>
-        /// 
-        /// </summary>
-        static string gracz2="dada";/// <summary>
-        /// 
-        /// </summary>
-        bool k_gracz = true;/// <summary>
-        /// 
-        /// </summary>
-        /// <param name="k_gracz"></param>
-        /// <returns></returns>
-
-        static bool losuj(bool k_gracz) /// losowanie gracza kto zaczyna
+        public pole_gry()
         {
-            Random rand = new Random();///
-            for (int i = 1; i <= 2; i++)///
-            {
-                k_gracz = rand.Next(2) == 0 ? false : true;///
-            }
-            return k_gracz;///
+            InitializeComponent();
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\agaza\OneDrive\Desktop\Projekt\Baza_kolko_krzyzyk.accdb;
+Persist Security Info=False;";
+            ustawienie_poczatkowe();
+            lbl_przypisanie();
+
         }
         /// <summary>
-        /// przypisywanie przyciskow x,o w zaleznosci od klikniecia
+        /// int ilosc = 0 - zmienna okreslająca ilość klilniętych buttonów, domyślnie ustawiona jest na 0(czyli na ekranie nie są wyświetlane żadne znaki na buttonach)
         /// </summary>
-        private void button_click(object sender, RoutedEventArgs e) /// obsluga klikniecia buttona
+        int ilosc = 0;
+        string gracz1 = "an";
+        static string gracz2 = "dada";
+        bool k_gracz = true;
+
+
+        /// <summary>
+        /// funkcja statyczna z parametrem bool, służąca do losowania 
+        /// </summary>
+        /// <param name="k_gracz">parametr bool, który  </param>
+        /// <returns>zwraca losowego gracza, który ma rozpoczynać grę </returns>
+
+        public bool  losuj(bool k_gracz)
         {
-
-            Button b = (Button)sender; ///
-            if (k_gracz) ///
+            Random rand = new Random();
+            for (int i = 1; i <= 2; i++)
             {
-                b.Content = "X";///
+                k_gracz = rand.Next(2) == 0 ? false : true;
             }
-            else///
-            {
-                b.Content = "O";///
-            }
-
-            ktoma_ruch();///odwołanie do metody ktoma_ruch
-            k_gracz = !k_gracz;///
-            b.IsEnabled = false;///
-            ilosc++;///
-            ktowygral();///odwołanie do metody ktowygral
+            return k_gracz;
         }
-
-        private void mysz_zaznaczenie(object sender, MouseEventArgs e) /// najechanie na button
+        /// <summary>
+        /// przypisywanie przyciskow x,o w zaleznosci od klikniecia - funkcja obługująca kliknięcie buttona
+        /// </summary>
+        private void button_click(object sender, RoutedEventArgs e)
         {
-            Button b = (Button)sender;///
-            if (b.IsEnabled) /// sprawdzenie czy mysz znajduje sie na buttonie
+
+            Button b = (Button)sender;
+            if (k_gracz)
             {
-                if (k_gracz)///warunek logiczny if
+                b.Content = "X";
+            }
+            else
+            {
+                b.Content = "O";
+            }
+
+            ktoma_ruch();
+            k_gracz = !k_gracz;
+            b.IsEnabled = false;
+            ilosc++;
+            ktowygral();
+        }
+        /// <summary>
+        /// metoda weryfikująca najechanie na button
+        /// sprawdzenie przy pomocy warunku if...else czy mysz znajduje się na buttonie, pokazanie w zależności od gracza O lub X
+        /// 
+        /// </summary>
+
+        private void mysz_zaznaczenie(object sender, MouseEventArgs e)
+        {
+            Button b = (Button)sender;
+            if (b.IsEnabled)
+            {
+                if (k_gracz)
                 {
-                    b.Content = "X"; /// pokazanie X na buttonie
+                    b.Content = "X";
                 }
-                else///warunek logiczney else
-                    b.Content = "O"; /// pokazanie O na buttonie
+                else
+                    b.Content = "O";
             }
         }
+        /// <summary>
+        /// metoda, w której sprawdzamy czy mysz znajduje się na buttonie i przypisanie pustej nazwy do buttona
+        /// /// </summary>
 
-        private void mysz_odznaczenie(object sender, MouseEventArgs e)///metoda mysz_odznaczenie
+        private void mysz_odznaczenie(object sender, MouseEventArgs e)
         {
-            Button b = (Button)sender;///
-            if (b.IsEnabled) /// sprawdzenie czy mysz znajduje sie na buttonie
+            Button b = (Button)sender;
+            if (b.IsEnabled)
             {
-                b.Content = ""; /// nadanie pustej nazwy buttona
+                b.Content = "";
             }
         }
         /// <summary>
@@ -113,27 +117,30 @@ Persist Security Info=False;"; /// odwolanie do lokalnej bazy danych_z adresem
         private void ustawienie_poczatkowe() /// ustawienie zerowych statystyk i etykiet kto gra
         {
 
-            l_wygranych_x.Content = "0";///
-            l_wygranych_o.Content = "0";///
-            l_remisow.Content = "0";///
-            if (k_gracz)///
+            l_wygranych_x.Content = "0";
+            l_wygranych_o.Content = "0";
+            l_remisow.Content = "0";
+            if (k_gracz)
             {
-                lbl_ruch.Content = "Teraz ruch ma:";///
-                lbl_ruch2.Content = gracz1;///
+                lbl_ruch.Content = "Teraz ruch ma:";
+                lbl_ruch2.Content = gracz1;
             }
             else///
             {
-                lbl_ruch.Content = "Teraz ruch ma:";///
-                lbl_ruch2.Content = gracz2;///
+                lbl_ruch.Content = "Teraz ruch ma:";
+                lbl_ruch2.Content = gracz2;
             }
         }
-        private void nowagra() /// metoda obslugujaca nowa gre
+        /// <summary>
+        /// metoda obslugujaca nowa gre - przypisuje wartość losową, zeruje tą wartość(ilosc=0) oraz przy pomocy pętli przeszukuje elementy w grid
+        /// </summary>
+        private void nowagra()
         {
-            k_gracz = losuj(k_gracz); /// przypisanie wartosci losowej
-            ilosc = 0; ///zerowanie wartosci
-            foreach (UIElement przyciski in gridd.Children)  ///petla przeszukanie elementow w grid,
+            k_gracz = losuj(k_gracz);
+            ilosc = 0;
+            foreach (UIElement przyciski in gridd.Children)
             {
-                if (przyciski.GetType() == typeof(Button)) ///typ button
+                if (przyciski.GetType() == typeof(Button))
                 {
                     Button btn = (Button)przyciski;///
                     btn.IsEnabled = true;///
@@ -141,61 +148,78 @@ Persist Security Info=False;"; /// odwolanie do lokalnej bazy danych_z adresem
                 }
             }
         }
-
-        private void lbl_przypisanie() /// przypisanie tekstu etykieta label
+        /// <summary>
+        /// metoda przypisania tekstu do etykiety - wyświetlenie komunikatu o remisiez
+        /// </summary>
+        private void lbl_przypisanie()
         {
-            lbl_gracz1.Content = gracz1;///
-            lbl_gracz2.Content = gracz2;///
-            lbl_remis.Content = "Remis";///
+            lbl_gracz1.Content = gracz1;
+            lbl_gracz2.Content = gracz2;
+            lbl_remis.Content = "Remis";
         }
-
-        private void nowagra_Click(object sender, RoutedEventArgs e) //przycisk menu
+        /// <summary>
+        /// metoda button_click - zwraca metody nowagra oraz ustwienia_początkowe - jest to metoda przycisku menu
+        /// </summary>
+        private void nowagra_Click(object sender, RoutedEventArgs e)
         {
 
-            nowagra();///
-            ustawienie_poczatkowe();///
+            nowagra();
+            ustawienie_poczatkowe();
         }
+        /// <summary>
+        /// metoda wyświetlająca po kliknięciu informacji o programie, za pomocą MessageBox
+        /// </summary>
 
-        private void o_programie_Click(object sender, RoutedEventArgs e) /// menu o programie
+        private void o_programie_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Gra Stworzona przez:\nAgnieszka Zaguła \nKrystian Libuszowski\nMirosław Kiełbowicz", "Informacje");///okno informacyjne, kto stwprzyl grę
         }
+        /// <summary>
+        /// metoda powodująca zamknięcie aplikacji po kliknięciu w przycisk wyjście
+        /// </summary>
 
-        private void wyjscie_click(object sender, RoutedEventArgs e) /// menu zamkniecie aplikacji
+        private void wyjscie_click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();///
         }
+        /// <summary>
+        /// metoda wyświetlenia okna ze statystykami po kliknięciu w przycisk
+        /// </summary>
 
-        private void statystyki_Click(object sender, RoutedEventArgs e) /// menu statystyki
+        private void statystyki_Click(object sender, RoutedEventArgs e)
         {
             Statystyki fs = new Statystyki();
             fs.ShowDialog();///
         }
-
-        private void ktoma_ruch() ///metoda sprawdzenia kto ma teraz ruch
+        /// <summary>
+        /// metoda sprawdzenia kto ma teraz ruch - wyświetlanie komunikatu o ruchu danego gracza
+        /// </summary>
+        private void ktoma_ruch()
         {
-            if (k_gracz)///
+            if (k_gracz)
             {
-                lbl_ruch.Content = "Teraz ruch ma: ";///
-                lbl_ruch2.Content = gracz2;///
+                lbl_ruch.Content = "Teraz ruch ma: ";
+                lbl_ruch2.Content = gracz2;
             }
             else
             {
-                lbl_ruch.Content = "Teraz ruch ma: ";///
-                lbl_ruch2.Content = gracz1;///
+                lbl_ruch.Content = "Teraz ruch ma: ";
+                lbl_ruch2.Content = gracz1;
             }
         }
-
-        private void ktowygral() ///sprawdzenie kto wygral oraz dodanie statystyk
+        /// <summary>
+        /// sprawdzenie kto wygral oraz dodanie wyniku do statystyk poprzez odwołanie do tabeli Uzytkownicy, kolumny Login i połączenie go z TextBoxem txt_login oraz do kolumny Haslo i połączenie z tekstboxem txt_password
+        /// </summary>
+        public void ktowygral()
         {
-            connection.Open();///otwarcie połączenia z bazą danych
-            OleDbCommand command = new OleDbCommand();//inicjalizacja nowej instancji
-            command.Connection = connection;///
-            command.CommandText = "select * from Punkty";  /// odwołanie do tabeli Uzytkownicy, kolumny Login i połączenie go z TextBoxem txt_login oraz do kolumny Haslo i połączenie z tekstboxem txt_password
-         
+
+            connection.Open();
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "select * from Punkty";
 
 
-            bool zwyciezca = false; ///
+            bool zwyciezca = false;
 
             /// sprawdzenie poziome
             if ((A1.Content == A2.Content) && (A2.Content == A3.Content) && (!A1.IsEnabled))
@@ -235,7 +259,7 @@ Persist Security Info=False;"; /// odwolanie do lokalnej bazy danych_z adresem
                     l_wygranych_o.Content = Convert.ToInt32(l_wygranych_o.Content) + 1;
                     command.CommandText = "insert into Punkty (Login , Punkty) values (@kolumna1 , @kolumna2)"; // zapis do bazy punktu za wygranie rundy
                     command.Parameters.AddWithValue("@kolumna1", wys_zwyciezcy);/// rozpisanie kolumn
-                    command.Parameters.AddWithValue("@kolumna2", '1');    
+                    command.Parameters.AddWithValue("@kolumna2", '1');
                     command.ExecuteNonQuery(); ///zwraca informację o wykonanym zadaniu do bazy danych
                     connection.Close();
                     MessageBox.Show(wys_zwyciezcy + " Wygral!", "Wynik");
@@ -253,8 +277,8 @@ Persist Security Info=False;"; /// odwolanie do lokalnej bazy danych_z adresem
                     connection.Close();
                     MessageBox.Show(wys_zwyciezcy + " Wygral!", "Wynik");
                     nowagra();
-             
-                    
+
+
                 }
             }
 
@@ -263,14 +287,17 @@ Persist Security Info=False;"; /// odwolanie do lokalnej bazy danych_z adresem
                 if (ilosc == 9)///warunek if
                 {
                     l_remisow.Content = Convert.ToInt32(l_remisow.Content) + 1;
-                    MessageBox.Show("Remis", "Wynik");///wyświietlenie komunikatu 
+                    MessageBox.Show("Remis", "Wynik");///wyświetlenie komunikatu 
                     nowagra();//odwołanie do metody nowagra
 
                 }
             }
-     
+
             connection.Close(); ///zamknięcie połączenia z baza danych
         }
 
-        }
-    } 
+
+    }
+    }
+
+    

@@ -15,22 +15,30 @@ using System.Windows.Shapes;
 namespace projekt
 {
     /// <summary>
-    /// Panel logowania i rejestracji
+    /// panel początkowy z rejestracją i logowaniem
     /// </summary>
     public partial class panel1 : Window
     {
-        public panel1()
+        
+        public panel1() 
         {
-            InitializeComponent();
+            InitializeComponent();  
         }
-
-        private void Przycisk1_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// funkcja przenosząca nas do panelu rejestracyjnego za pośrednictwem kliknięcia w button
+        /// </summary>
+        
+        private void Przycisk1_Click(object sender, RoutedEventArgs e) 
+  
         {
             panel_rej wnd = new panel_rej();
           wnd.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// metoda przenosząca nas do panelu logowania za pośrednictwem kliknięcia w button
+        /// </summary>
+       
         private void Przycisk2_Click(object sender, RoutedEventArgs e)
         {
           panel_log wnd2 = new panel_log();

@@ -15,35 +15,47 @@ using System.Data.OleDb;
 namespace projekt
 {
     /// <summary>
-    /// Interaction logic for konto_u.xaml
+    /// konto uzytkownika
     /// </summary>
   
-
-    public partial class konto_u : Window///klasa publiczna konto_u
+    public partial class konto_u : Window
+   
     {
-    
-        private OleDbConnection connection = new OleDbConnection();///prywatne połączenie z bazą danych
+        /// <summary>
+        /// połączenie z bazą danych
+        /// </summary>
+        private OleDbConnection connection = new OleDbConnection();
+     
 
 
         /// <summary>
-        /// Konto_u pobranie z bazy nazwy zalogowanego uzytkownika i wyswietlenie.
+        /// konto_u pobranie z bazy nazwy zalogowanego uzytkownika i wyswietlenie.
         /// </summary>
-        public konto_u(string user) /// konstruktor z obiektem typu string
+        public konto_u(string user)
+      
         {
-           
-            InitializeComponent();///inicjalizacja bazy
-            nazwa_gracza_baza.Content = "Witaj "+ user+"!"; /// Powitanie użytkownika wyświetlenie nazwy zgodnie z uzytkownikiem, który się zalogował w panelu logowania
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Projekt\Baza_kolko_krzyzyk.accdb;
-Persist Security Info=False;";  ///to jest połączenie z bazą danych z lokalizacją na lokalnym dysku komputera
+            ///<summary>po zalogowaniu w panelu logowania w etykiecie zostaje wyświetlona nazwa użytkowanika</summary>
+            InitializeComponent();
           
+            nazwa_gracza_baza.Content = "Witaj "+ user+"!";
+           
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\agaza\OneDrive\Desktop\Projekt\Baza_kolko_krzyzyk.accdb;
+Persist Security Info=False;";
+                     
         }
         
-
-        private void Button_Click(object sender, RoutedEventArgs e)///metoda do kliknięcia myszką na przycisk
+        /// <summary>
+        /// metoda kliknięcia w przycisk przenosi nas do pola gry
+        /// </summary>
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            pole_gry wnd = new pole_gry();///przeniesienie po wcisnięciu do okna pole gry
-            wnd.Show();///otwarcie okna
-            this.Close();///zamknięcie okna bieżącego
+            
+            pole_gry wnd = new pole_gry();
+            wnd.Show();
+            this.Close();
+            
         }
+   
     }
 }
