@@ -8,13 +8,17 @@ using System.Threading.Tasks;
 using System.Data.OleDb;
 
 namespace projekt.Tests
-{
+{/// <summary>
+/// klasa testująca pole_gryTests
+/// </summary>
     [TestClass()]
     public class pole_gryTests
     {
         private OleDbConnection connection = new OleDbConnection();
 
-
+        /// <summary>
+        /// metoda sprawdzająca losowość oraz czy poprawnie działa wybór gracza, który rozpoczyna rozgrywkę
+        /// </summary>
         [TestMethod()]
         public void losujTest()
         {
@@ -31,7 +35,9 @@ namespace projekt.Tests
                 Assert.AreEqual(expected, actual);
             }
         }
-
+        /// <summary>
+        /// metoda testująca zapis punktów do bazy danych przypisanych odpowiedniemu użytkownikowi
+        /// </summary>
         [TestMethod()]
         public void Spr_zapis_do_bazy_Wynik()
         {

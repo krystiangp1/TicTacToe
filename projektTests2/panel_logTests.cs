@@ -7,13 +7,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 namespace projekt.Tests
-{
+{/// <summary>
+/// klasa testująca panel_logTests
+/// </summary>
     [TestClass()]
+    
     public class panel_logTests
     {
         private OleDbConnection connection = new OleDbConnection();
-  
+  /// <summary>
+  /// metoda testująca logowanie użytkownika - czy połączenie z bazą i wyszukiwanie w niej działą poprawnie, osiągnięte to zostało poprzez pętle, która sprawdza po kolei każdy wiersz w bazie i weryfikuje czy takie dane występują w tabeli
+  /// </summary>
         [TestMethod()]
+        
         public void TestLogowania()
         {
            

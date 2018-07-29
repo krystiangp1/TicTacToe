@@ -9,13 +9,17 @@ using System.Data.OleDb;
 using System.Data;
 
 namespace projekt.Tests
-{
+{/// <summary>
+/// klasa testująca StatystykiTests
+/// </summary>
     [TestClass()]
     public class StatystykiTests
     {
         public OleDbConnection connection = new OleDbConnection();
       
-   
+   /// <summary>
+   /// metoda testująca połączenie z bazą danych, z której będą wyśwoietlane statystyki
+   /// </summary>
         [TestMethod]
         public void SprawdzenieBazy()
         {
