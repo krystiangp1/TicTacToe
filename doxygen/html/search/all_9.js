@@ -1,6 +1,29 @@
 var searchData=
 [
-  ['readxmlserializable',['ReadXmlSerializable',['../classprojekt_1_1DataSet1.html#a5a88a43948496bdc4d9ddcafd794d957',1,'projekt::DataSet1']]],
-  ['relations',['Relations',['../classprojekt_1_1DataSet1.html#a6b93e786dcf82bd1c416e96311c865e2',1,'projekt::DataSet1']]],
-  ['resources_2edesigner_2ecs',['Resources.Designer.cs',['../Resources_8Designer_8cs.html',1,'']]]
+  ['panel1',['panel1',['../classprojekt_1_1panel1.html',1,'projekt.panel1'],['../classprojekt_1_1panel1.html#a7440a39d8704e252b8d181a930174ef3',1,'projekt.panel1.panel1()']]],
+  ['panel1_2eg_2ecs',['panel1.g.cs',['../_debug_2panel1_8g_8cs.html',1,'(Global Namespace)'],['../x64_2_debug_2panel1_8g_8cs.html',1,'(Global Namespace)'],['../x86_2_debug_2panel1_8g_8cs.html',1,'(Global Namespace)'],['../x86_2_release_2panel1_8g_8cs.html',1,'(Global Namespace)']]],
+  ['panel1_2eg_2ei_2ecs',['panel1.g.i.cs',['../_debug_2panel1_8g_8i_8cs.html',1,'(Global Namespace)'],['../x64_2_debug_2panel1_8g_8i_8cs.html',1,'(Global Namespace)'],['../x64_2_release_2panel1_8g_8i_8cs.html',1,'(Global Namespace)'],['../x86_2_debug_2panel1_8g_8i_8cs.html',1,'(Global Namespace)'],['../x86_2_release_2panel1_8g_8i_8cs.html',1,'(Global Namespace)']]],
+  ['panel1_2examl_2ecs',['panel1.xaml.cs',['../panel1_8xaml_8cs.html',1,'']]],
+  ['panel_5flog',['panel_log',['../classprojekt_1_1panel__log.html',1,'projekt.panel_log'],['../classprojekt_1_1panel__log.html#a96570278e031a563b59923c0acacae9b',1,'projekt.panel_log.panel_log()']]],
+  ['panel_5flog_2eg_2ecs',['panel_log.g.cs',['../_debug_2panel__log_8g_8cs.html',1,'(Global Namespace)'],['../x64_2_debug_2panel__log_8g_8cs.html',1,'(Global Namespace)'],['../x86_2_debug_2panel__log_8g_8cs.html',1,'(Global Namespace)'],['../x86_2_release_2panel__log_8g_8cs.html',1,'(Global Namespace)']]],
+  ['panel_5flog_2eg_2ei_2ecs',['panel_log.g.i.cs',['../_debug_2panel__log_8g_8i_8cs.html',1,'(Global Namespace)'],['../x64_2_debug_2panel__log_8g_8i_8cs.html',1,'(Global Namespace)'],['../x64_2_release_2panel__log_8g_8i_8cs.html',1,'(Global Namespace)'],['../x86_2_debug_2panel__log_8g_8i_8cs.html',1,'(Global Namespace)'],['../x86_2_release_2panel__log_8g_8i_8cs.html',1,'(Global Namespace)']]],
+  ['panel_5flog_2examl_2ecs',['panel_log.xaml.cs',['../panel__log_8xaml_8cs.html',1,'']]],
+  ['panel_5flogtests',['panel_logTests',['../classprojekt_1_1_tests_1_1panel__log_tests.html',1,'projekt::Tests']]],
+  ['panel_5flogtests_2ecs',['panel_logTests.cs',['../panel__log_tests_8cs.html',1,'']]],
+  ['panel_5frej',['panel_rej',['../classprojekt_1_1panel__rej.html',1,'projekt.panel_rej'],['../classprojekt_1_1panel__rej.html#ac8e3a97468a6c4fe9f49b37721a7e265',1,'projekt.panel_rej.panel_rej()']]],
+  ['panel_5frej_2eg_2ecs',['panel_rej.g.cs',['../_debug_2panel__rej_8g_8cs.html',1,'(Global Namespace)'],['../x64_2_debug_2panel__rej_8g_8cs.html',1,'(Global Namespace)'],['../x86_2_debug_2panel__rej_8g_8cs.html',1,'(Global Namespace)'],['../x86_2_release_2panel__rej_8g_8cs.html',1,'(Global Namespace)']]],
+  ['panel_5frej_2eg_2ei_2ecs',['panel_rej.g.i.cs',['../_debug_2panel__rej_8g_8i_8cs.html',1,'(Global Namespace)'],['../x64_2_debug_2panel__rej_8g_8i_8cs.html',1,'(Global Namespace)'],['../x64_2_release_2panel__rej_8g_8i_8cs.html',1,'(Global Namespace)'],['../x86_2_debug_2panel__rej_8g_8i_8cs.html',1,'(Global Namespace)'],['../x86_2_release_2panel__rej_8g_8i_8cs.html',1,'(Global Namespace)']]],
+  ['panel_5frej_2examl_2ecs',['panel_rej.xaml.cs',['../panel__rej_8xaml_8cs.html',1,'']]],
+  ['panel_5frejtests',['panel_rejTests',['../classprojekt_1_1_tests_1_1panel__rej_tests.html',1,'projekt::Tests']]],
+  ['panel_5frejtests_2ecs',['panel_rejTests.cs',['../panel__rej_tests_8cs.html',1,'']]],
+  ['pole_5fgry',['pole_gry',['../classprojekt_1_1pole__gry.html',1,'projekt.pole_gry'],['../classprojekt_1_1pole__gry.html#a5a66280013aef4e5a38ae1d0928d978a',1,'projekt.pole_gry.pole_gry()']]],
+  ['pole_5fgry_2eg_2ecs',['pole_gry.g.cs',['../_debug_2pole__gry_8g_8cs.html',1,'(Global Namespace)'],['../x64_2_debug_2pole__gry_8g_8cs.html',1,'(Global Namespace)'],['../x86_2_debug_2pole__gry_8g_8cs.html',1,'(Global Namespace)'],['../x86_2_release_2pole__gry_8g_8cs.html',1,'(Global Namespace)']]],
+  ['pole_5fgry_2eg_2ei_2ecs',['pole_gry.g.i.cs',['../_debug_2pole__gry_8g_8i_8cs.html',1,'(Global Namespace)'],['../x64_2_debug_2pole__gry_8g_8i_8cs.html',1,'(Global Namespace)'],['../x64_2_release_2pole__gry_8g_8i_8cs.html',1,'(Global Namespace)'],['../x86_2_debug_2pole__gry_8g_8i_8cs.html',1,'(Global Namespace)'],['../x86_2_release_2pole__gry_8g_8i_8cs.html',1,'(Global Namespace)']]],
+  ['pole_5fgry_2examl_2ecs',['pole_gry.xaml.cs',['../pole__gry_8xaml_8cs.html',1,'']]],
+  ['pole_5fgrytests',['pole_gryTests',['../classprojekt_1_1_tests_1_1pole__gry_tests.html',1,'projekt::Tests']]],
+  ['pole_5fgrytests_2ecs',['pole_gryTests.cs',['../pole__gry_tests_8cs.html',1,'']]],
+  ['projekt',['projekt',['../namespaceprojekt.html',1,'']]],
+  ['projekt_5fcontent_2eg_2ei_2ecs',['projekt_Content.g.i.cs',['../projekt___content_8g_8i_8cs.html',1,'']]],
+  ['properties',['Properties',['../namespaceprojekt_1_1_properties.html',1,'projekt']]],
+  ['tests',['Tests',['../namespaceprojekt_1_1_tests.html',1,'projekt']]]
 ];

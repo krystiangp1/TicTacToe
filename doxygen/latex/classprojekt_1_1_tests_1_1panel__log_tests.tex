@@ -2,32 +2,45 @@
 \label{classprojekt_1_1_tests_1_1panel__log_tests}\index{projekt.\+Tests.\+panel\+\_\+log\+Tests@{projekt.\+Tests.\+panel\+\_\+log\+Tests}}
 
 
-atrybut klasy testowej  
+ 
 
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classprojekt_1_1_tests_1_1panel__log_tests_acd1fb478675bc744fb08dcbbce12bf26}{panel\+\_\+log\+Test}} ()
-\begin{DoxyCompactList}\small\item\em atrybut metody testowej \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classprojekt_1_1_tests_1_1panel__log_tests_a0c6089b447469ddabdd5eda42f9e163b}{Test\+Logowania}} ()
+\begin{DoxyCompactList}\small\item\em metoda testująca logowanie użytkownika -\/ czy połączenie z bazą i wyszukiwanie w niej działą poprawnie, osiągnięte to zostało poprzez pętle, która sprawdza po kolei każdy wiersz w bazie i weryfikuje czy takie dane występują w tabeli \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-atrybut klasy testowej 
+
+
+klasa testująca \mbox{\hyperlink{classprojekt_1_1_tests_1_1panel__log_tests}{panel\+\_\+log\+Tests}} 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classprojekt_1_1_tests_1_1panel__log_tests_acd1fb478675bc744fb08dcbbce12bf26}\label{classprojekt_1_1_tests_1_1panel__log_tests_acd1fb478675bc744fb08dcbbce12bf26}} 
-\index{projekt\+::\+Tests\+::panel\+\_\+log\+Tests@{projekt\+::\+Tests\+::panel\+\_\+log\+Tests}!panel\+\_\+log\+Test@{panel\+\_\+log\+Test}}
-\index{panel\+\_\+log\+Test@{panel\+\_\+log\+Test}!projekt\+::\+Tests\+::panel\+\_\+log\+Tests@{projekt\+::\+Tests\+::panel\+\_\+log\+Tests}}
-\subsubsection{\texorpdfstring{panel\+\_\+log\+Test()}{panel\_logTest()}}
-{\footnotesize\ttfamily void projekt.\+Tests.\+panel\+\_\+log\+Tests.\+panel\+\_\+log\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classprojekt_1_1_tests_1_1panel__log_tests_a0c6089b447469ddabdd5eda42f9e163b}\label{classprojekt_1_1_tests_1_1panel__log_tests_a0c6089b447469ddabdd5eda42f9e163b}} 
+\index{projekt\+::\+Tests\+::panel\+\_\+log\+Tests@{projekt\+::\+Tests\+::panel\+\_\+log\+Tests}!Test\+Logowania@{Test\+Logowania}}
+\index{Test\+Logowania@{Test\+Logowania}!projekt\+::\+Tests\+::panel\+\_\+log\+Tests@{projekt\+::\+Tests\+::panel\+\_\+log\+Tests}}
+\subsubsection{\texorpdfstring{Test\+Logowania()}{TestLogowania()}}
+{\footnotesize\ttfamily void projekt.\+Tests.\+panel\+\_\+log\+Tests.\+Test\+Logowania (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-atrybut metody testowej 
+metoda testująca logowanie użytkownika -\/ czy połączenie z bazą i wyszukiwanie w niej działą poprawnie, osiągnięte to zostało poprzez pętle, która sprawdza po kolei każdy wiersz w bazie i weryfikuje czy takie dane występują w tabeli 
 
-właściciel testu Assert kolekcja klas pomocniczych do testowania jednostkowego 
+while (reader.\+Read()) przy pomocy pętli while zwiększam wartość zmiennej count o 1(będzie to odzwierciedleniem indeksów w bazie, dzięki temu weryfikuje po kolei loginy i hasła wpisane do bazy); ///
+
+count++;
+
+instrukcja if(jesli hasło jest poprawne i się pokrywa 1\+:1 to logowanie następuje i pojawia się komunikat. ~\newline
+~\newline
+~\newline
+ else czyli pozostałe przypadki, jeśli użytkownik wpisze niepoprawne wartości do textboxa loginu lub hasła wyrzuci komunikat o niepoprawnych danych
+
+zakmnięcie połączenia z bazą danych
+
+zamknięcie odczytywania danych z bazy 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-projekt\+Tests/panel\+\_\+log\+Tests.\+cs\end{DoxyCompactItemize}
+projekt\+Tests2/\mbox{\hyperlink{panel__log_tests_8cs}{panel\+\_\+log\+Tests.\+cs}}\end{DoxyCompactItemize}

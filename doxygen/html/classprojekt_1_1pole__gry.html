@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: projekt.pole_gry Class Reference</title>
+<title>TicTacToe: projekt.pole_gry Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">TicTacToe
    </div>
+   <div id="projectbrief">Krystian Libuszowski Agnieszka Zaguła</div>
   </td>
  </tr>
  </tbody>
@@ -114,15 +115,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acb91309f48624fdcd50a6f023a810f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">InitializeComponent  <a href="#acb91309f48624fdcd50a6f023a810f02">More...</a><br /></td></tr>
 <tr class="separator:acb91309f48624fdcd50a6f023a810f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a66280013aef4e5a38ae1d0928d978a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprojekt_1_1pole__gry.html#a5a66280013aef4e5a38ae1d0928d978a">pole_gry</a> ()</td></tr>
-<tr class="memdesc:a5a66280013aef4e5a38ae1d0928d978a"><td class="mdescLeft">&#160;</td><td class="mdescRight">private OleDbConnection connection = new OleDbConnection(); połączenie prywatne do bazy danych z klasy <a class="el" href="classprojekt_1_1pole__gry.html" title="pole_gry ">pole_gry</a>  <a href="#a5a66280013aef4e5a38ae1d0928d978a">More...</a><br /></td></tr>
+<tr class="memdesc:a5a66280013aef4e5a38ae1d0928d978a"><td class="mdescLeft">&#160;</td><td class="mdescRight">inicjalizuje połączenie z bazą danych  <a href="#a5a66280013aef4e5a38ae1d0928d978a">More...</a><br /></td></tr>
 <tr class="separator:a5a66280013aef4e5a38ae1d0928d978a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3b718227f0dd6c91ed8dc97213b703"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprojekt_1_1pole__gry.html#aeb3b718227f0dd6c91ed8dc97213b703">losuj</a> (bool k_gracz)</td></tr>
+<tr class="memdesc:aeb3b718227f0dd6c91ed8dc97213b703"><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja statyczna z parametrem bool, służąca do losowania  <a href="#aeb3b718227f0dd6c91ed8dc97213b703">More...</a><br /></td></tr>
+<tr class="separator:aeb3b718227f0dd6c91ed8dc97213b703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de9e42bcabf05e113ae232dbffb793b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprojekt_1_1pole__gry.html#a5de9e42bcabf05e113ae232dbffb793b">ktowygral</a> ()</td></tr>
+<tr class="memdesc:a5de9e42bcabf05e113ae232dbffb793b"><td class="mdescLeft">&#160;</td><td class="mdescRight">sprawdzenie kto wygral oraz dodanie wyniku do statystyk poprzez odwołanie do tabeli Uzytkownicy, kolumny Login i połączenie go z TextBoxem txt_login oraz do kolumny Haslo i połączenie z tekstboxem txt_password  <a href="#a5de9e42bcabf05e113ae232dbffb793b">More...</a><br /></td></tr>
+<tr class="separator:a5de9e42bcabf05e113ae232dbffb793b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classprojekt_1_1pole__gry.html" title="pole_gry ">pole_gry</a> </p>
-<p>Logika interakcji dla klasy pole gry </p>
-<p>clasa <a class="el" href="classprojekt_1_1pole__gry.html" title="pole_gry ">pole_gry</a> </p>
-
-<p class="definition">Definition at line <a class="el" href="Debug_2pole__gry_8g_8cs_source.html#l00041">41</a> of file <a class="el" href="Debug_2pole__gry_8g_8cs_source.html">pole_gry.g.cs</a>.</p>
+<p>pole gry </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5a66280013aef4e5a38ae1d0928d978a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a66280013aef4e5a38ae1d0928d978a">&#9670;&nbsp;</a></span>pole_gry()</h2>
@@ -147,13 +151,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>private OleDbConnection connection = new OleDbConnection(); połączenie prywatne do bazy danych z klasy <a class="el" href="classprojekt_1_1pole__gry.html" title="pole_gry ">pole_gry</a> </p>
-<p>odwółanine do klasy </p>
-<p>odwolanie do lokalnej bazy danych_z adresem</p>
-<p>odwolanie do metody</p>
-<p>odwolanie do metody </p>
-
-<p class="definition">Definition at line <a class="el" href="pole__gry_8xaml_8cs_source.html#l00027">27</a> of file <a class="el" href="pole__gry_8xaml_8cs_source.html">pole_gry.xaml.cs</a>.</p>
+<p>inicjalizuje połączenie z bazą danych </p>
 
 </div>
 </div>
@@ -183,8 +181,6 @@ Public Member Functions</h2></td></tr>
 
 <p>InitializeComponent </p>
 
-<p class="definition">Definition at line <a class="el" href="Debug_2pole__gry_8g_8cs_source.html#l00202">202</a> of file <a class="el" href="Debug_2pole__gry_8g_8cs_source.html">pole_gry.g.cs</a>.</p>
-
 </div>
 </div>
 <a id="acb91309f48624fdcd50a6f023a810f02"></a>
@@ -211,8 +207,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>InitializeComponent </p>
-
-<p class="definition">Definition at line <a class="el" href="Debug_2pole__gry_8g_8i_8cs_source.html#l00202">202</a> of file <a class="el" href="Debug_2pole__gry_8g_8i_8cs_source.html">pole_gry.g.i.cs</a>.</p>
 
 </div>
 </div>
@@ -241,8 +235,6 @@ Public Member Functions</h2></td></tr>
 
 <p>InitializeComponent </p>
 
-<p class="definition">Definition at line <a class="el" href="x86_2Release_2pole__gry_8g_8cs_source.html#l00210">210</a> of file <a class="el" href="x86_2Release_2pole__gry_8g_8cs_source.html">pole_gry.g.cs</a>.</p>
-
 </div>
 </div>
 <a id="acb91309f48624fdcd50a6f023a810f02"></a>
@@ -269,8 +261,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>InitializeComponent </p>
-
-<p class="definition">Definition at line <a class="el" href="x86_2Debug_2pole__gry_8g_8i_8cs_source.html#l00210">210</a> of file <a class="el" href="x86_2Debug_2pole__gry_8g_8i_8cs_source.html">pole_gry.g.i.cs</a>.</p>
 
 </div>
 </div>
@@ -299,8 +289,6 @@ Public Member Functions</h2></td></tr>
 
 <p>InitializeComponent </p>
 
-<p class="definition">Definition at line <a class="el" href="x86_2Debug_2pole__gry_8g_8cs_source.html#l00210">210</a> of file <a class="el" href="x86_2Debug_2pole__gry_8g_8cs_source.html">pole_gry.g.cs</a>.</p>
-
 </div>
 </div>
 <a id="acb91309f48624fdcd50a6f023a810f02"></a>
@@ -327,8 +315,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>InitializeComponent </p>
-
-<p class="definition">Definition at line <a class="el" href="x64_2Release_2pole__gry_8g_8i_8cs_source.html#l00210">210</a> of file <a class="el" href="x64_2Release_2pole__gry_8g_8i_8cs_source.html">pole_gry.g.i.cs</a>.</p>
 
 </div>
 </div>
@@ -357,8 +343,6 @@ Public Member Functions</h2></td></tr>
 
 <p>InitializeComponent </p>
 
-<p class="definition">Definition at line <a class="el" href="x64_2Debug_2pole__gry_8g_8i_8cs_source.html#l00210">210</a> of file <a class="el" href="x64_2Debug_2pole__gry_8g_8i_8cs_source.html">pole_gry.g.i.cs</a>.</p>
-
 </div>
 </div>
 <a id="acb91309f48624fdcd50a6f023a810f02"></a>
@@ -385,8 +369,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>InitializeComponent </p>
-
-<p class="definition">Definition at line <a class="el" href="x64_2Debug_2pole__gry_8g_8cs_source.html#l00210">210</a> of file <a class="el" href="x64_2Debug_2pole__gry_8g_8cs_source.html">pole_gry.g.cs</a>.</p>
 
 </div>
 </div>
@@ -415,14 +397,92 @@ Public Member Functions</h2></td></tr>
 
 <p>InitializeComponent </p>
 
-<p class="definition">Definition at line <a class="el" href="x86_2Release_2pole__gry_8g_8i_8cs_source.html#l00210">210</a> of file <a class="el" href="x86_2Release_2pole__gry_8g_8i_8cs_source.html">pole_gry.g.i.cs</a>.</p>
+</div>
+</div>
+<a id="a5de9e42bcabf05e113ae232dbffb793b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de9e42bcabf05e113ae232dbffb793b">&#9670;&nbsp;</a></span>ktowygral()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void projekt.pole_gry.ktowygral </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>sprawdzenie kto wygral oraz dodanie wyniku do statystyk poprzez odwołanie do tabeli Uzytkownicy, kolumny Login i połączenie go z TextBoxem txt_login oraz do kolumny Haslo i połączenie z tekstboxem txt_password </p>
+<p>sprawdzenie poziome</p>
+<p>sprawdzenie pion</p>
+<p>sprawdzenie po przekatnej</p>
+<p>zapis do bazy wygranej,oraz wyswietlenie zwyciezcy </p>
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ rozpisanie kolumn</p>
+<p>zwraca informację o wykonanym zadaniu do bazy danych</p>
+<p>rozpisanie kolumn</p>
+<p>zwraca informację o wykonanym zadaniu do bazy danych</p>
+<p>warunek if</p>
+<p>wyświetlenie komunikatu <br />
+ zamknięcie połączenia z baza danych </p>
+
+</div>
+</div>
+<a id="aeb3b718227f0dd6c91ed8dc97213b703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb3b718227f0dd6c91ed8dc97213b703">&#9670;&nbsp;</a></span>losuj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool projekt.pole_gry.losuj </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>k_gracz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>funkcja statyczna z parametrem bool, służąca do losowania </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k_gracz</td><td>parametr bool, który </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>zwraca losowego gracza, który ma rozpoczynać grę </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>projekt/obj/Debug/<a class="el" href="Debug_2pole__gry_8g_8cs_source.html">pole_gry.g.cs</a></li>
-<li>projekt/obj/Debug/<a class="el" href="Debug_2pole__gry_8g_8i_8cs_source.html">pole_gry.g.i.cs</a></li>
-<li>projekt/<a class="el" href="pole__gry_8xaml_8cs_source.html">pole_gry.xaml.cs</a></li>
+<li>projekt/obj/Debug/<a class="el" href="_debug_2pole__gry_8g_8cs.html">pole_gry.g.cs</a></li>
+<li>projekt/obj/Debug/<a class="el" href="_debug_2pole__gry_8g_8i_8cs.html">pole_gry.g.i.cs</a></li>
+<li>projekt/<a class="el" href="pole__gry_8xaml_8cs.html">pole_gry.xaml.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

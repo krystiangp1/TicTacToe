@@ -23,7 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TicTacToe
    </div>
-   <div id="projectbrief">Krystian Libuszowski, Agnieszka Zaguła, Mirosław Kiełbowicz</div>
+   <div id="projectbrief">Krystian Libuszowski Agnieszka Zaguła</div>
   </td>
  </tr>
  </tbody>
@@ -74,20 +74,20 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>atrybut klasy testowej  
+<p> 
  <a href="classprojekt_1_1_tests_1_1panel__log_tests.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acd1fb478675bc744fb08dcbbce12bf26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprojekt_1_1_tests_1_1panel__log_tests.html#acd1fb478675bc744fb08dcbbce12bf26">panel_logTest</a> ()</td></tr>
-<tr class="memdesc:acd1fb478675bc744fb08dcbbce12bf26"><td class="mdescLeft">&#160;</td><td class="mdescRight">atrybut metody testowej  <a href="#acd1fb478675bc744fb08dcbbce12bf26">More...</a><br /></td></tr>
-<tr class="separator:acd1fb478675bc744fb08dcbbce12bf26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c6089b447469ddabdd5eda42f9e163b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprojekt_1_1_tests_1_1panel__log_tests.html#a0c6089b447469ddabdd5eda42f9e163b">TestLogowania</a> ()</td></tr>
+<tr class="memdesc:a0c6089b447469ddabdd5eda42f9e163b"><td class="mdescLeft">&#160;</td><td class="mdescRight">metoda testująca logowanie użytkownika - czy połączenie z bazą i wyszukiwanie w niej działą poprawnie, osiągnięte to zostało poprzez pętle, która sprawdza po kolei każdy wiersz w bazie i weryfikuje czy takie dane występują w tabeli  <a href="#a0c6089b447469ddabdd5eda42f9e163b">More...</a><br /></td></tr>
+<tr class="separator:a0c6089b447469ddabdd5eda42f9e163b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>atrybut klasy testowej </p>
+<div class="textblock"><p>klasa testująca <a class="el" href="classprojekt_1_1_tests_1_1panel__log_tests.html">panel_logTests</a> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="acd1fb478675bc744fb08dcbbce12bf26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd1fb478675bc744fb08dcbbce12bf26">&#9670;&nbsp;</a></span>panel_logTest()</h2>
+<a id="a0c6089b447469ddabdd5eda42f9e163b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c6089b447469ddabdd5eda42f9e163b">&#9670;&nbsp;</a></span>TestLogowania()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -96,7 +96,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void projekt.Tests.panel_logTests.panel_logTest </td>
+          <td class="memname">void projekt.Tests.panel_logTests.TestLogowania </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -109,14 +109,20 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>atrybut metody testowej </p>
-<p>właściciel testu </p>
-<p>Assert kolekcja klas pomocniczych do testowania jednostkowego </p>
+<p>metoda testująca logowanie użytkownika - czy połączenie z bazą i wyszukiwanie w niej działą poprawnie, osiągnięte to zostało poprzez pętle, która sprawdza po kolei każdy wiersz w bazie i weryfikuje czy takie dane występują w tabeli </p>
+<p>while (reader.Read()) przy pomocy pętli while zwiększam wartość zmiennej count o 1(będzie to odzwierciedleniem indeksów w bazie, dzięki temu weryfikuje po kolei loginy i hasła wpisane do bazy); ///</p>
+<p>count++;</p>
+<p>instrukcja if(jesli hasło jest poprawne i się pokrywa 1:1 to logowanie następuje i pojawia się komunikat. <br />
+<br />
+<br />
+ else czyli pozostałe przypadki, jeśli użytkownik wpisze niepoprawne wartości do textboxa loginu lub hasła wyrzuci komunikat o niepoprawnych danych</p>
+<p>zakmnięcie połączenia z bazą danych</p>
+<p>zamknięcie odczytywania danych z bazy </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>projektTests/panel_logTests.cs</li>
+<li>projektTests2/<a class="el" href="panel__log_tests_8cs.html">panel_logTests.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

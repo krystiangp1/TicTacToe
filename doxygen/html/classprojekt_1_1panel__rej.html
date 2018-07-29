@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: projekt.panel_rej Class Reference</title>
+<title>TicTacToe: projekt.panel_rej Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">TicTacToe
    </div>
+   <div id="projectbrief">Krystian Libuszowski Agnieszka Zaguła</div>
   </td>
  </tr>
  </tbody>
@@ -114,14 +115,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a603f590d84827e1d551b3f781d6c1f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">InitializeComponent  <a href="#a603f590d84827e1d551b3f781d6c1f28">More...</a><br /></td></tr>
 <tr class="separator:a603f590d84827e1d551b3f781d6c1f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8e3a97468a6c4fe9f49b37721a7e265"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprojekt_1_1panel__rej.html#ac8e3a97468a6c4fe9f49b37721a7e265">panel_rej</a> ()</td></tr>
-<tr class="memdesc:ac8e3a97468a6c4fe9f49b37721a7e265"><td class="mdescLeft">&#160;</td><td class="mdescRight">private OleDbConnection connection = new OleDbConnection(); prywatne połączenie z bazą  <a href="#ac8e3a97468a6c4fe9f49b37721a7e265">More...</a><br /></td></tr>
+<tr class="memdesc:ac8e3a97468a6c4fe9f49b37721a7e265"><td class="mdescLeft">&#160;</td><td class="mdescRight">metoda, gdzie jest połączenie z bazą danych przy pomocy ścieżki do pliku wykorzysując klasę System.String  <a href="#ac8e3a97468a6c4fe9f49b37721a7e265">More...</a><br /></td></tr>
 <tr class="separator:ac8e3a97468a6c4fe9f49b37721a7e265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea82627753b6eee1ed0fef05c784fadc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprojekt_1_1panel__rej.html#aea82627753b6eee1ed0fef05c784fadc">b_zarejestruj_Click</a> (object sender, RoutedEventArgs e)</td></tr>
+<tr class="memdesc:aea82627753b6eee1ed0fef05c784fadc"><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja b_zarejestruj_Click - po użyciu przycisku dane po spełnieniu warunku zapisywane są do tabeli użytkownicy w bazie danych (służy do tego odwołanie sql w kodzie)  <a href="#aea82627753b6eee1ed0fef05c784fadc">More...</a><br /></td></tr>
+<tr class="separator:aea82627753b6eee1ed0fef05c784fadc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classprojekt_1_1panel__rej.html" title="panel_rej ">panel_rej</a> </p>
-<p>Logika interakcji dla klasy Window2.xaml </p>
-
-<p class="definition">Definition at line <a class="el" href="Debug_2panel__rej_8g_8cs_source.html#l00041">41</a> of file <a class="el" href="Debug_2panel__rej_8g_8cs_source.html">panel_rej.g.cs</a>.</p>
+<p>panel rejestracyjny </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac8e3a97468a6c4fe9f49b37721a7e265"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac8e3a97468a6c4fe9f49b37721a7e265">&#9670;&nbsp;</a></span>panel_rej()</h2>
@@ -146,16 +148,64 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>private OleDbConnection connection = new OleDbConnection(); prywatne połączenie z bazą </p>
-<p><a class="el" href="classprojekt_1_1panel__rej.html#a603f590d84827e1d551b3f781d6c1f28" title="InitializeComponent ">InitializeComponent()</a>;///inicjalizacja bazy connection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:.accdb; Persist Security Info=False;"; ///to jest połączenie z bazą danych z lokalizacją na lokalnym dysku komputera } </p>
-<p><a class="el" href="classprojekt_1_1panel__rej.html#a603f590d84827e1d551b3f781d6c1f28" title="InitializeComponent ">InitializeComponent()</a>;inicjalizacja bazy</p>
-<p>connection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:.accdb; Persist Security Info = False; "; to jest połączenie z bazą danych z lokalizacją na lokalnym dysku komputera</p>
-
-<p class="definition">Definition at line <a class="el" href="panel__rej_8xaml_8cs_source.html#l00025">25</a> of file <a class="el" href="panel__rej_8xaml_8cs_source.html">panel_rej.xaml.cs</a>.</p>
+<p>metoda, gdzie jest połączenie z bazą danych przy pomocy ścieżki do pliku wykorzysując klasę System.String </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aea82627753b6eee1ed0fef05c784fadc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea82627753b6eee1ed0fef05c784fadc">&#9670;&nbsp;</a></span>b_zarejestruj_Click()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void projekt.panel_rej.b_zarejestruj_Click </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RoutedEventArgs&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>funkcja b_zarejestruj_Click - po użyciu przycisku dane po spełnieniu warunku zapisywane są do tabeli użytkownicy w bazie danych (służy do tego odwołanie sql w kodzie) </p>
+<p>tworzę zmienną int count równą 0(będzie to odzwierciedleniem loginów i haseł w bazie, dzięki temu weryfikuje po kolei loginy i hasła wpisane do bazy)</p>
+<p>przy pomocy pętli while poruszam się rosnąco po rekordach naszej bazy</p>
+<p>count++;</p>
+<p>instrukcja if(jesli loginów i haseł jest mniej niż 1 zapisuje konto)</p>
+<p>command.CommandText = "insert into Uzytkownicy(Login, Haslo) values('"+txt_login.Text + "','" + txt_password.Password +"',)"; // odwołanie do bazy danych aby po spełnieniu warunku if nasze dane zostają zapisane w tabeli w odpowiednich kolumnach</p>
+<p>rozpisanie kolumn</p>
+<p>zwraca informację o wykonanym zadaniu do bazy danych(czyli zapisuje login i hasło do bazy)</p>
+<p>connection.Close zamyka połączenie z bazą danych po spełnieniu warunku</p>
+<p>jeśli przy logowaniu wartość takiego samego loginu i hasła jest taka sama, zwraca komunikat o istniejącym loginie lub haśle</p>
+<p>baza danych dysponuje już takimi danymi <br />
+<br />
+<br />
+ jeśli przy logowaniu wartość takiego samego loginu i hasła jest taka sama, zwraca komunikat o istniejącym loginie lub haśle</p>
+<p>baza danych dysponuje już takimi danymi <br />
+ else czyli pozostałe przypadki, jeśli użytkownik wpisze niepoprawne wartości do textboxa loginu lub hasła wyrzuci komunikat o niepoprawnych danych </p>
+
+</div>
+</div>
 <a id="a603f590d84827e1d551b3f781d6c1f28"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a603f590d84827e1d551b3f781d6c1f28">&#9670;&nbsp;</a></span>InitializeComponent() <span class="overload">[1/9]</span></h2>
 
@@ -180,8 +230,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>InitializeComponent </p>
-
-<p class="definition">Definition at line <a class="el" href="Debug_2panel__rej_8g_8cs_source.html#l00122">122</a> of file <a class="el" href="Debug_2panel__rej_8g_8cs_source.html">panel_rej.g.cs</a>.</p>
 
 </div>
 </div>
@@ -210,8 +258,6 @@ Public Member Functions</h2></td></tr>
 
 <p>InitializeComponent </p>
 
-<p class="definition">Definition at line <a class="el" href="x86_2Release_2panel__rej_8g_8i_8cs_source.html#l00122">122</a> of file <a class="el" href="x86_2Release_2panel__rej_8g_8i_8cs_source.html">panel_rej.g.i.cs</a>.</p>
-
 </div>
 </div>
 <a id="a603f590d84827e1d551b3f781d6c1f28"></a>
@@ -238,8 +284,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>InitializeComponent </p>
-
-<p class="definition">Definition at line <a class="el" href="x86_2Release_2panel__rej_8g_8cs_source.html#l00122">122</a> of file <a class="el" href="x86_2Release_2panel__rej_8g_8cs_source.html">panel_rej.g.cs</a>.</p>
 
 </div>
 </div>
@@ -268,8 +312,6 @@ Public Member Functions</h2></td></tr>
 
 <p>InitializeComponent </p>
 
-<p class="definition">Definition at line <a class="el" href="x86_2Debug_2panel__rej_8g_8i_8cs_source.html#l00122">122</a> of file <a class="el" href="x86_2Debug_2panel__rej_8g_8i_8cs_source.html">panel_rej.g.i.cs</a>.</p>
-
 </div>
 </div>
 <a id="a603f590d84827e1d551b3f781d6c1f28"></a>
@@ -296,8 +338,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>InitializeComponent </p>
-
-<p class="definition">Definition at line <a class="el" href="x86_2Debug_2panel__rej_8g_8cs_source.html#l00122">122</a> of file <a class="el" href="x86_2Debug_2panel__rej_8g_8cs_source.html">panel_rej.g.cs</a>.</p>
 
 </div>
 </div>
@@ -326,8 +366,6 @@ Public Member Functions</h2></td></tr>
 
 <p>InitializeComponent </p>
 
-<p class="definition">Definition at line <a class="el" href="x64_2Release_2panel__rej_8g_8i_8cs_source.html#l00122">122</a> of file <a class="el" href="x64_2Release_2panel__rej_8g_8i_8cs_source.html">panel_rej.g.i.cs</a>.</p>
-
 </div>
 </div>
 <a id="a603f590d84827e1d551b3f781d6c1f28"></a>
@@ -354,8 +392,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>InitializeComponent </p>
-
-<p class="definition">Definition at line <a class="el" href="x64_2Debug_2panel__rej_8g_8i_8cs_source.html#l00122">122</a> of file <a class="el" href="x64_2Debug_2panel__rej_8g_8i_8cs_source.html">panel_rej.g.i.cs</a>.</p>
 
 </div>
 </div>
@@ -384,8 +420,6 @@ Public Member Functions</h2></td></tr>
 
 <p>InitializeComponent </p>
 
-<p class="definition">Definition at line <a class="el" href="x64_2Debug_2panel__rej_8g_8cs_source.html#l00122">122</a> of file <a class="el" href="x64_2Debug_2panel__rej_8g_8cs_source.html">panel_rej.g.cs</a>.</p>
-
 </div>
 </div>
 <a id="a603f590d84827e1d551b3f781d6c1f28"></a>
@@ -413,14 +447,12 @@ Public Member Functions</h2></td></tr>
 
 <p>InitializeComponent </p>
 
-<p class="definition">Definition at line <a class="el" href="Debug_2panel__rej_8g_8i_8cs_source.html#l00122">122</a> of file <a class="el" href="Debug_2panel__rej_8g_8i_8cs_source.html">panel_rej.g.i.cs</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>projekt/obj/Debug/<a class="el" href="Debug_2panel__rej_8g_8cs_source.html">panel_rej.g.cs</a></li>
-<li>projekt/obj/Debug/<a class="el" href="Debug_2panel__rej_8g_8i_8cs_source.html">panel_rej.g.i.cs</a></li>
-<li>projekt/<a class="el" href="panel__rej_8xaml_8cs_source.html">panel_rej.xaml.cs</a></li>
+<li>projekt/obj/Debug/<a class="el" href="_debug_2panel__rej_8g_8cs.html">panel_rej.g.cs</a></li>
+<li>projekt/obj/Debug/<a class="el" href="_debug_2panel__rej_8g_8i_8cs.html">panel_rej.g.i.cs</a></li>
+<li>projekt/<a class="el" href="panel__rej_8xaml_8cs.html">panel_rej.xaml.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

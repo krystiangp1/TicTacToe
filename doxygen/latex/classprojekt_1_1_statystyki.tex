@@ -33,13 +33,15 @@ void \mbox{\hyperlink{classprojekt_1_1_statystyki_a6f4801d8176e1c715f5260bf055b0
 void \mbox{\hyperlink{classprojekt_1_1_statystyki_a6f4801d8176e1c715f5260bf055b0915}{Initialize\+Component}} ()
 \begin{DoxyCompactList}\small\item\em Initialize\+Component \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classprojekt_1_1_statystyki_ae90a003d3720200a8ef9b33e6f9f0225}{Statystyki}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em tutaj następuje inicjalizacja bazy danych oraz połączenie poprzez lokalne wskazanie ścieżki pliku \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classprojekt_1_1_statystyki_ad332fb6b7fc8e823ca0f23f3bb9fdc7c}{button\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em metoda kliknięcia po kliknięciu w przycisk otwierane jest połączączenie z bazą danych(dokładnie poprzez odwołanie poprzez sql do tabeli przechowującej dane) w tabeli wyświetlane są wyniki wszystkich graczy w razie blędnego połączenia z bazą danych wyświetlany jest komunikat o problemach \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 \mbox{\hyperlink{classprojekt_1_1_statystyki}{Statystyki}} 
 
-
+statystyki 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classprojekt_1_1_statystyki_ae90a003d3720200a8ef9b33e6f9f0225}\label{classprojekt_1_1_statystyki_ae90a003d3720200a8ef9b33e6f9f0225}} 
@@ -50,13 +52,21 @@ void \mbox{\hyperlink{classprojekt_1_1_statystyki_a6f4801d8176e1c715f5260bf055b0
 
 
 
+tutaj następuje inicjalizacja bazy danych oraz połączenie poprzez lokalne wskazanie ścieżki pliku 
 
 
-połączenie z bazą inicjalizacja bazy
-
-odwolanie do lokalnej bazy danych 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classprojekt_1_1_statystyki_ad332fb6b7fc8e823ca0f23f3bb9fdc7c}\label{classprojekt_1_1_statystyki_ad332fb6b7fc8e823ca0f23f3bb9fdc7c}} 
+\index{projekt\+::\+Statystyki@{projekt\+::\+Statystyki}!button\+\_\+\+Click@{button\+\_\+\+Click}}
+\index{button\+\_\+\+Click@{button\+\_\+\+Click}!projekt\+::\+Statystyki@{projekt\+::\+Statystyki}}
+\subsubsection{\texorpdfstring{button\+\_\+\+Click()}{button\_Click()}}
+{\footnotesize\ttfamily void projekt.\+Statystyki.\+button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+metoda kliknięcia po kliknięciu w przycisk otwierane jest połączączenie z bazą danych(dokładnie poprzez odwołanie poprzez sql do tabeli przechowującej dane) w tabeli wyświetlane są wyniki wszystkich graczy w razie blędnego połączenia z bazą danych wyświetlany jest komunikat o problemach 
+
 \mbox{\Hypertarget{classprojekt_1_1_statystyki_a6f4801d8176e1c715f5260bf055b0915}\label{classprojekt_1_1_statystyki_a6f4801d8176e1c715f5260bf055b0915}} 
 \index{projekt\+::\+Statystyki@{projekt\+::\+Statystyki}!Initialize\+Component@{Initialize\+Component}}
 \index{Initialize\+Component@{Initialize\+Component}!projekt\+::\+Statystyki@{projekt\+::\+Statystyki}}
@@ -151,6 +161,6 @@ Initialize\+Component
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-projekt/obj/\+Debug/Statystyki.\+g.\+cs\item 
-projekt/obj/\+Debug/Statystyki.\+g.\+i.\+cs\item 
-projekt/Statystyki.\+xaml.\+cs\end{DoxyCompactItemize}
+projekt/obj/\+Debug/\mbox{\hyperlink{_debug_2_statystyki_8g_8cs}{Statystyki.\+g.\+cs}}\item 
+projekt/obj/\+Debug/\mbox{\hyperlink{_debug_2_statystyki_8g_8i_8cs}{Statystyki.\+g.\+i.\+cs}}\item 
+projekt/\mbox{\hyperlink{_statystyki_8xaml_8cs}{Statystyki.\+xaml.\+cs}}\end{DoxyCompactItemize}
